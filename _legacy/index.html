@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&C Automotores | Alta Gama en Buenos Aires</title>
+  <meta name="description" content="Concesionaria boutique de vehículos de alta gama, deportivos y seminuevos certificados en Buenos Aires." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D4AF37',
+            base: '#10131A',
+            lowest: '#0B0E14',
+            card: '#191C22',
+            cardalt: '#1C2027',
+            hover: '#363940',
+            ink: '#F1F5F9',
+            muted: '#94A3B8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderColor: {
+            gold: 'rgba(212, 175, 55, 0.15)',
+            goldstrong: 'rgba(212, 175, 55, 0.4)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+</head>
+
+<body class="bg-base text-muted font-sans antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-base/70 border-b border-gold">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-display text-xl text-ink tracking-wide">
+        M&amp;C <span class="text-primary">Automotores</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <li><a href="index.html" class="hover:text-primary transition-colors duration-300">Inicio</a></li>
+        <li><a href="nosotros.html" class="hover:text-primary transition-colors duration-300">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="hover:text-primary transition-colors duration-300">Ubicación</a></li>
+        <li><a href="testimonios.html" class="hover:text-primary transition-colors duration-300">Testimonios</a></li>
+        <li><a href="cotizador.html" class="hover:text-primary transition-colors duration-300">Cotizá</a></li>
+      </ul>
+
+      <a href="https://wa.me/5491145678900" target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 border border-goldstrong text-primary rounded-full px-4 py-2 text-sm hover:bg-primary hover:text-lowest transition-all duration-300">
+        <span class="material-symbols-outlined text-base">chat</span>
+        +54 9 11 4567-8900
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-ink" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold bg-base/95 backdrop-blur-md">
+      <ul class="flex flex-col px-4 py-4 gap-4 text-sm">
+        <li><a href="index.html" class="block hover:text-primary transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="block hover:text-primary transition-colors">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="block hover:text-primary transition-colors">Ubicación</a></li>
+        <li><a href="testimonios.html" class="block hover:text-primary transition-colors">Testimonios</a></li>
+        <li><a href="cotizador.html" class="block hover:text-primary transition-colors">Cotizá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <!-- ================= HERO + BUSCADOR ================= -->
+    <section class="relative border-b border-gold">
+      <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
+        <p class="text-primary uppercase tracking-[0.3em] text-xs mb-4">Buenos Aires · Desde 2010</p>
+        <h1 class="font-display text-4xl md:text-6xl text-ink leading-tight max-w-3xl">
+          Vehículos de alta gama, <span class="text-primary">sin sorpresas.</span>
+        </h1>
+        <p class="mt-5 max-w-xl">Deportivos, sedanes ejecutivos y seminuevos certificados con peritaje de 150 puntos y gestoría propia.</p>
+
+        <!-- Buscador -->
+        <form id="searchForm" class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 bg-card/60 backdrop-blur-md border border-gold rounded-2xl p-4">
+          <select id="fBrand" class="bg-cardalt border border-gold rounded-xl px-3 py-3 text-sm text-ink focus:border-goldstrong outline-none">
+            <option value="">Marca</option>
+            <option>Porsche</option>
+            <option>BMW</option>
+            <option>Mercedes-Benz</option>
+            <option>Audi</option>
+          </select>
+          <select id="fYear" class="bg-cardalt border border-gold rounded-xl px-3 py-3 text-sm text-ink focus:border-goldstrong outline-none">
+            <option value="">Año</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+          </select>
+          <select id="fKm" class="bg-cardalt border border-gold rounded-xl px-3 py-3 text-sm text-ink focus:border-goldstrong outline-none">
+            <option value="">Kilómetros</option>
+            <option value="20000">Hasta 20.000 km</option>
+            <option value="50000">Hasta 50.000 km</option>
+            <option value="100000">Hasta 100.000 km</option>
+          </select>
+          <select id="fPrice" class="bg-cardalt border border-gold rounded-xl px-3 py-3 text-sm text-ink focus:border-goldstrong outline-none">
+            <option value="">Precio</option>
+            <option value="0-30000">Hasta USD 30.000</option>
+            <option value="30000-70000">USD 30.000 – 70.000</option>
+            <option value="70000-999999999">+ USD 70.000</option>
+          </select>
+          <button type="submit" class="col-span-2 md:col-span-4 bg-primary text-lowest font-semibold rounded-xl py-3 hover:brightness-110 transition-all duration-300">
+            Buscar en catálogo
+          </button>
+        </form>
+
+        <a href="https://wa.me/5491145678900" target="_blank" rel="noopener"
+           class="mt-6 inline-flex items-center gap-2 text-primary hover:underline">
+          <span class="material-symbols-outlined">chat</span>
+          Asesoramiento inmediato por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= CATÁLOGO ================= -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="font-display text-3xl text-ink">Catálogo destacado</h2>
+        <span id="resultCount" class="text-sm"></span>
+      </div>
+      <div id="vehicleGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <p id="emptyMsg" class="hidden text-center py-16">No se encontraron vehículos con esos filtros.</p>
+    </section>
+  </main>
+
+  <!-- Modal detalle -->
+  <div id="detailModal" class="hidden fixed inset-0 z-50 bg-lowest/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-card border border-goldstrong rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-10 relative">
+      <button onclick="closeDetail()" class="absolute top-4 right-4 z-20 bg-lowest/70 backdrop-blur-sm text-muted hover:text-primary rounded-full p-1 transition-colors">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <div class="relative">
+        <img id="dImage" class="w-full h-96 object-contain bg-lowest rounded-2xl" alt="Vehículo" />
+        <button onclick="openFullscreen()" title="Ver en pantalla completa" class="absolute bottom-3 left-3 bg-lowest/70 rounded-full p-2 text-ink hover:text-primary"><span class="material-symbols-outlined">fullscreen</span></button>
+        <button id="dPrev" onclick="stepImage(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-lowest/60 rounded-full p-2 text-ink hover:text-primary"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button id="dNext" onclick="stepImage(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-lowest/60 rounded-full p-2 text-ink hover:text-primary"><span class="material-symbols-outlined">chevron_right</span></button>
+        <p id="dCounter" class="absolute bottom-3 right-4 text-xs bg-lowest/60 rounded-full px-3 py-1"></p>
+      </div>
+      <h3 id="dTitle" class="mt-6 font-display text-3xl text-ink"></h3>
+      <p id="dPrice" class="mt-2 text-2xl text-primary font-semibold"></p>
+      <p id="dInst" class="text-xs"></p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 text-xs">
+        <span class="bg-cardalt rounded-lg px-3 py-2 text-center" id="dYear"></span>
+        <span class="bg-cardalt rounded-lg px-3 py-2 text-center" id="dKm"></span>
+        <span class="bg-cardalt rounded-lg px-3 py-2 text-center" id="dMotor"></span>
+        <span class="bg-cardalt rounded-lg px-3 py-2 text-center" id="dTrans"></span>
+      </div>
+      <a id="dWhats" href="#" target="_blank" class="mt-8 block text-center bg-primary text-lowest font-semibold rounded-xl py-3 hover:brightness-110 transition-all duration-300">Consultar por WhatsApp</a>
+      <p id="dDesc" class="mt-6 text-sm whitespace-pre-line border-t border-gold pt-4"></p>
+    </div>
+  </div>
+
+  <!-- Visor pantalla completa -->
+  <div id="fullscreenViewer" class="hidden fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4">
+    <button onclick="closeFullscreen()" class="absolute top-4 right-4 bg-lowest/70 rounded-full p-2 text-ink hover:text-primary"><span class="material-symbols-outlined text-3xl">close</span></button>
+    <button onclick="stepImage(-1); refreshFullscreen()" class="absolute left-4 bg-lowest/70 rounded-full p-3 text-ink hover:text-primary"><span class="material-symbols-outlined text-3xl">chevron_left</span></button>
+    <img id="fsImage" class="max-w-full max-h-full object-contain" alt="Vehículo en pantalla completa" />
+    <button onclick="stepImage(1); refreshFullscreen()" class="absolute right-4 bg-lowest/70 rounded-full p-3 text-ink hover:text-primary"><span class="material-symbols-outlined text-3xl">chevron_right</span></button>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-lowest border-t border-gold mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3 text-sm">
+      <div>
+        <p class="font-display text-lg text-ink">M&amp;C <span class="text-primary">Automotores</span></p>
+        <p class="mt-3">Concesionaria boutique de vehículos de alta gama en Buenos Aires.</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Contacto</h3>
+        <p>+54 9 11 4567-8900</p>
+        <p>ventas@mcautomotores.com</p>
+        <p>Av. del Libertador, Corredor Norte, CABA</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Legal</h3>
+        <p>© 2026 M&amp;C Automotores. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // ===== Catálogo =====
+    const API = 'http://localhost:4000/api/v1/vehicles';
+
+    const fallbackVehicles = [
+      { brand: 'Porsche', model: '911 Carrera', year: 2023, kilometers: 12000, price: 145000, images: ['https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80'], status: 'available', technicalSpecs: { motor: '3.0L Biturbo', transmision: 'PDK 8', traccion: 'RWD' } },
+      { brand: 'BMW', model: 'M4 Competition', year: 2022, kilometers: 28000, price: 82000, images: ['https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80'], status: 'available', technicalSpecs: { motor: '3.0L TwinPower', transmision: 'M Steptronic', traccion: 'RWD' } },
+      { brand: 'Mercedes-Benz', model: 'Clase E 300', year: 2021, kilometers: 45000, price: 52000, images: ['https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80'], status: 'reserved', technicalSpecs: { motor: '2.0L Turbo', transmision: '9G-Tronic', traccion: '4MATIC' } },
+    ];
+
+    const grid = document.getElementById('vehicleGrid');
+    const emptyMsg = document.getElementById('emptyMsg');
+    const resultCount = document.getElementById('resultCount');
+
+    function formatPrice(n, currency = 'USD') {
+      return `${currency === 'ARS' ? '$' : 'USD'} ${Number(n).toLocaleString('es-AR')}`;
+    }
+
+    function renderVehicles(vehicles) {
+      window._vehicles = vehicles;
+      resultCount.textContent = `${vehicles.length} unidad(es)`;
+      emptyMsg.classList.toggle('hidden', vehicles.length > 0);
+      grid.innerHTML = vehicles.map((v) => `
+        <article class="bg-card border border-gold rounded-2xl overflow-hidden hover:border-goldstrong transition-all duration-300">
+          <img src="${v.images?.[0] ? (v.images[0].startsWith('/uploads') ? 'http://localhost:4000' + v.images[0] : v.images[0]) : 'https://placehold.co/800x500/191C22/D4AF37?text=M%26C'}" alt="${v.brand} ${v.model}" class="w-full h-52 object-contain bg-lowest" />
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="font-display text-xl text-ink">${v.brand} ${v.model}</h3>
+              <span class="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full border ${v.status === 'available' ? 'border-goldstrong text-primary' : 'border-gold text-muted'}">${v.status === 'available' ? 'Disponible' : v.status === 'reserved' ? 'Reservado' : 'Vendido'}</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-4 text-xs text-muted">
+              <span class="bg-cardalt rounded-lg px-2 py-1 text-center">${v.year}</span>
+              <span class="bg-cardalt rounded-lg px-2 py-1 text-center">${Number(v.kilometers).toLocaleString('es-AR')} km</span>
+              <span class="bg-cardalt rounded-lg px-2 py-1 text-center">${v.technicalSpecs?.transmision || '-'}</span>
+            </div>
+            <p class="mt-4 text-2xl text-primary font-semibold">${formatPrice(v.price, v.priceCurrency)}</p>
+            <div class="mt-5 flex gap-2">
+              <button onclick="openDetail(${vehicles.indexOf(v)})" class="flex-1 bg-cardalt border border-goldstrong text-primary text-sm font-semibold rounded-xl py-2.5 hover:bg-primary hover:text-lowest transition-all duration-300">Ver detalle</button>
+              <a href="https://wa.me/5491145678900?text=Hola,%20quiero%20info%20del%20${encodeURIComponent(v.brand + ' ' + v.model)}" target="_blank" class="flex-1 text-center bg-primary text-lowest text-sm font-semibold rounded-xl py-2.5 hover:brightness-110 transition-all duration-300">Consultar</a>
+            </div>
+          </div>
+        </article>`).join('');
+    }
+
+    async function loadVehicles(params = {}) {
+      try {
+        const qs = new URLSearchParams(params).toString();
+        const res = await fetch(qs ? `${API}?${qs}` : API);
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        renderVehicles(data);
+      } catch {
+        renderVehicles(fallbackVehicles);
+      }
+    }
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    function imgSrc(s) { return s ? (s.startsWith('/uploads') ? 'http://localhost:4000' + s : s) : 'https://placehold.co/800x500/191C22/D4AF37?text=M%26C'; }
+
+    function openDetail(i) {
+      const v = window._vehicles[i];
+      if (!v) return;
+      currentImages = v.images && v.images.length ? v.images : [];
+      currentIndex = 0;
+      dTitle.textContent = `${v.brand} ${v.model}`;
+      dPrice.textContent = formatPrice(v.price, v.priceCurrency);
+      dInst.textContent = v.installmentPrice
+        ? `Anticipo de ${v.downPayment != null ? formatPrice(v.downPayment, v.priceCurrency) : 'a acordar'} · ${v.installments || 12} cuotas de ${formatPrice(v.installmentPrice, v.priceCurrency)}`
+        : `Financiación desde ${formatPrice(Math.round(v.price / 12), v.priceCurrency)}/mes`;
+      dYear.textContent = `Año ${v.year}`;
+      dKm.textContent = `${Number(v.kilometers).toLocaleString('es-AR')} km`;
+      dMotor.textContent = v.technicalSpecs?.motor || 'Motor s/d';
+      dTrans.textContent = v.technicalSpecs?.transmision || 'Transm. s/d';
+      dWhats.href = `https://wa.me/5491145678900?text=Hola,%20quiero%20info%20del%20${encodeURIComponent(v.brand + ' ' + v.model)}`;
+      dDesc.textContent = v.description || '';
+      dDesc.style.display = v.description ? '' : 'none';
+      document.getElementById('detailModal').classList.remove('hidden');
+      showImage();
+    }
+
+    function showImage() {
+      dImage.src = imgSrc(currentImages[currentIndex]);
+      fsImage.src = dImage.src;
+      dCounter.textContent = currentImages.length > 1 ? `${currentIndex + 1} / ${currentImages.length}` : '';
+      dPrev.style.display = currentImages.length > 1 ? '' : 'none';
+      dNext.style.display = currentImages.length > 1 ? '' : 'none';
+    }
+
+    function stepImage(dir) {
+      currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
+      showImage();
+    }
+
+    function closeDetail() { document.getElementById('detailModal').classList.add('hidden'); }
+
+    function openFullscreen() { fsImage.src = dImage.src; document.getElementById('fullscreenViewer').classList.remove('hidden'); }
+    function closeFullscreen() { document.getElementById('fullscreenViewer').classList.add('hidden'); }
+    function refreshFullscreen() { fsImage.src = imgSrc(currentImages[currentIndex]); }
+
+    document.getElementById('searchForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const params = {};
+      const brand = document.getElementById('fBrand').value;
+      const year = document.getElementById('fYear').value;
+      const km = document.getElementById('fKm').value;
+      const price = document.getElementById('fPrice').value;
+      if (brand) params.brand = brand;
+      if (year) params.year = year;
+      if (km) params.maxKilometers = km;
+      if (price) {
+        const [min, max] = price.split('-');
+        params.minPrice = min; params.maxPrice = max;
+      }
+      loadVehicles(params);
+    });
+
+    loadVehicles();
+  </script>
+</body>
+</html>

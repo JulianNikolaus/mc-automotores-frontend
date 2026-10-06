@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&C Automotores | Ubicación</title>
+  <meta name="description" content="Concesionaria boutique de vehículos de alta gama, deportivos y seminuevos certificados en Buenos Aires." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D4AF37',
+            base: '#10131A',
+            lowest: '#0B0E14',
+            card: '#191C22',
+            cardalt: '#1C2027',
+            hover: '#363940',
+            ink: '#F1F5F9',
+            muted: '#94A3B8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderColor: {
+            gold: 'rgba(212, 175, 55, 0.15)',
+            goldstrong: 'rgba(212, 175, 55, 0.4)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+</head>
+
+<body class="bg-base text-muted font-sans antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-base/70 border-b border-gold">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-display text-xl text-ink tracking-wide">
+        M&amp;C <span class="text-primary">Automotores</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <li><a href="index.html" class="hover:text-primary transition-colors duration-300">Inicio</a></li>
+        <li><a href="nosotros.html" class="hover:text-primary transition-colors duration-300">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="hover:text-primary transition-colors duration-300">Ubicación</a></li>
+        <li><a href="testimonios.html" class="hover:text-primary transition-colors duration-300">Testimonios</a></li>
+        <li><a href="cotizador.html" class="hover:text-primary transition-colors duration-300">Cotizá</a></li>
+      </ul>
+
+      <a href="https://wa.me/5491145678900" target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 border border-goldstrong text-primary rounded-full px-4 py-2 text-sm hover:bg-primary hover:text-lowest transition-all duration-300">
+        <span class="material-symbols-outlined text-base">chat</span>
+        +54 9 11 4567-8900
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-ink" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold bg-base/95 backdrop-blur-md">
+      <ul class="flex flex-col px-4 py-4 gap-4 text-sm">
+        <li><a href="index.html" class="block hover:text-primary transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="block hover:text-primary transition-colors">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="block hover:text-primary transition-colors">Ubicación</a></li>
+        <li><a href="testimonios.html" class="block hover:text-primary transition-colors">Testimonios</a></li>
+        <li><a href="cotizador.html" class="block hover:text-primary transition-colors">Cotizá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section class="max-w-7xl mx-auto px-4 py-20">
+      <p class="text-primary uppercase tracking-[0.3em] text-xs mb-4">Dónde estamos</p>
+      <h1 class="font-display text-4xl md:text-6xl text-ink max-w-3xl leading-tight">
+        Corredor Norte, <span class="text-primary">Buenos Aires.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl">Showroom, cava de seminuevos y lounge VIP en el corazón de Av. del Libertador.</p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 pb-16 grid gap-10 lg:grid-cols-2">
+      <!-- Mapa -->
+      <div class="rounded-3xl overflow-hidden border border-gold">
+        <iframe
+          title="Ubicación M&C Automotores"
+          class="w-full h-96 grayscale invert-[0.9] contrast-[0.9]"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.+del+Libertador,+Buenos+Aires&output=embed">
+        </iframe>
+      </div>
+
+      <!-- Horarios y acciones -->
+      <div>
+        <h2 class="font-display text-3xl text-ink">Horarios</h2>
+        <ul class="mt-6 divide-y divide-gold border-y border-gold text-sm">
+          <li class="flex justify-between py-3"><span>Lunes a Viernes</span><span class="text-ink">9:00 – 19:00</span></li>
+          <li class="flex justify-between py-3"><span>Sábados</span><span class="text-ink">10:00 – 17:00</span></li>
+          <li class="flex justify-between py-3"><span>Domingos</span><span class="text-ink">Con cita previa</span></li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://maps.google.com" target="_blank" class="bg-primary text-lowest font-semibold rounded-xl px-6 py-3 hover:brightness-110 transition-all duration-300">Abrir en Google Maps</a>
+          <a href="https://waze.com" target="_blank" class="border border-goldstrong text-primary rounded-xl px-6 py-3 hover:bg-primary hover:text-lowest transition-all duration-300">Abrir en Waze</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="max-w-7xl mx-auto px-4 pb-20">
+      <h2 class="font-display text-3xl text-ink mb-8">Nuestras instalaciones</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <figure class="bg-card border border-gold rounded-2xl overflow-hidden">
+          <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80" alt="Showroom" />
+          <figcaption class="p-4 text-ink">Showroom</figcaption>
+        </figure>
+        <figure class="bg-card border border-gold rounded-2xl overflow-hidden">
+          <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="Cava" />
+          <figcaption class="p-4 text-ink">Cava de seminuevos</figcaption>
+        </figure>
+        <figure class="bg-card border border-gold rounded-2xl overflow-hidden">
+          <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1542362567-b05503f84339?auto=format&fit=crop&w=800&q=80" alt="Lounge VIP" />
+          <figcaption class="p-4 text-ink">Lounge VIP</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-lowest border-t border-gold mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3 text-sm">
+      <div>
+        <p class="font-display text-lg text-ink">M&amp;C <span class="text-primary">Automotores</span></p>
+        <p class="mt-3">Concesionaria boutique de vehículos de alta gama en Buenos Aires.</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Contacto</h3>
+        <p>+54 9 11 4567-8900</p>
+        <p>ventas@mcautomotores.com</p>
+        <p>Av. del Libertador, Corredor Norte, CABA</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Legal</h3>
+        <p>© 2026 M&amp;C Automotores. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+  </script>
+</body>
+</html>

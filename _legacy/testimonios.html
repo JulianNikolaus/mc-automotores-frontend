@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&C Automotores | Testimonios</title>
+  <meta name="description" content="Concesionaria boutique de vehículos de alta gama, deportivos y seminuevos certificados en Buenos Aires." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D4AF37',
+            base: '#10131A',
+            lowest: '#0B0E14',
+            card: '#191C22',
+            cardalt: '#1C2027',
+            hover: '#363940',
+            ink: '#F1F5F9',
+            muted: '#94A3B8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderColor: {
+            gold: 'rgba(212, 175, 55, 0.15)',
+            goldstrong: 'rgba(212, 175, 55, 0.4)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+</head>
+
+<body class="bg-base text-muted font-sans antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-base/70 border-b border-gold">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-display text-xl text-ink tracking-wide">
+        M&amp;C <span class="text-primary">Automotores</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <li><a href="index.html" class="hover:text-primary transition-colors duration-300">Inicio</a></li>
+        <li><a href="nosotros.html" class="hover:text-primary transition-colors duration-300">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="hover:text-primary transition-colors duration-300">Ubicación</a></li>
+        <li><a href="testimonios.html" class="hover:text-primary transition-colors duration-300">Testimonios</a></li>
+        <li><a href="cotizador.html" class="hover:text-primary transition-colors duration-300">Cotizá</a></li>
+      </ul>
+
+      <a href="https://wa.me/5491145678900" target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 border border-goldstrong text-primary rounded-full px-4 py-2 text-sm hover:bg-primary hover:text-lowest transition-all duration-300">
+        <span class="material-symbols-outlined text-base">chat</span>
+        +54 9 11 4567-8900
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-ink" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold bg-base/95 backdrop-blur-md">
+      <ul class="flex flex-col px-4 py-4 gap-4 text-sm">
+        <li><a href="index.html" class="block hover:text-primary transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="block hover:text-primary transition-colors">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="block hover:text-primary transition-colors">Ubicación</a></li>
+        <li><a href="testimonios.html" class="block hover:text-primary transition-colors">Testimonios</a></li>
+        <li><a href="cotizador.html" class="block hover:text-primary transition-colors">Cotizá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section class="max-w-7xl mx-auto px-4 py-20">
+      <p class="text-primary uppercase tracking-[0.3em] text-xs mb-4">Prueba social</p>
+      <h1 class="font-display text-4xl md:text-6xl text-ink max-w-3xl leading-tight">
+        4.9/5 <span class="text-primary">auditado</span> por nuestros clientes.
+      </h1>
+      <p class="mt-6 max-w-2xl">Entregas verificadas, peritajes cumplidos y gestoría transparente.</p>
+    </section>
+
+    <!-- Muro de testimonios -->
+    <section class="max-w-7xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-3">
+      <article class="bg-card border border-gold rounded-2xl p-6">
+        <p class="text-primary tracking-widest">★★★★★</p>
+        <p class="mt-4 text-sm">"Entrega en 4 días, documentación impecable. El peritaje de 150 puntos me dio total tranquilidad."</p>
+        <p class="mt-4 text-primary text-sm">— Martín R. · BMW M4 · Entrega verificada</p>
+      </article>
+      <article class="bg-card border border-gold rounded-2xl p-6">
+        <p class="text-primary tracking-widest">★★★★★</p>
+        <p class="mt-4 text-sm">"La cava y el lounge marcan la diferencia. Asesoramiento honesto, sin presiones."</p>
+        <p class="mt-4 text-primary text-sm">— Lucía F. · Mercedes-Benz Clase E · Entrega verificada</p>
+      </article>
+      <article class="bg-card border border-gold rounded-2xl p-6">
+        <p class="text-primary tracking-widest">★★★★★</p>
+        <p class="mt-4 text-sm">"Segunda compra con ellos. El seguimiento post-venta es de primer nivel."</p>
+        <p class="mt-4 text-primary text-sm">— Diego S. · Porsche 911 · Entrega verificada</p>
+      </article>
+    </section>
+
+    <!-- Formulario -->
+    <section class="max-w-3xl mx-auto px-4 pb-20">
+      <h2 class="font-display text-3xl text-ink mb-8">Dejá tu reseña</h2>
+      <form id="reviewForm" class="bg-card border border-gold rounded-3xl p-8 space-y-5">
+        <div>
+          <label class="text-sm text-ink" for="rName">Nombre</label>
+          <input id="rName" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+        </div>
+        <div>
+          <label class="text-sm text-ink">Calificación</label>
+          <div id="stars" class="mt-2 flex gap-1 text-3xl text-hover">
+            <button type="button" data-v="1">★</button>
+            <button type="button" data-v="2">★</button>
+            <button type="button" data-v="3">★</button>
+            <button type="button" data-v="4">★</button>
+            <button type="button" data-v="5">★</button>
+          </div>
+          <input type="hidden" id="rRating" value="5" />
+        </div>
+        <div>
+          <label class="text-sm text-ink" for="rText">Tu experiencia</label>
+          <textarea id="rText" rows="4" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none"></textarea>
+        </div>
+        <div>
+          <label class="text-sm text-ink" for="rPhoto">Fotografía (opcional)</label>
+          <input id="rPhoto" type="file" accept="image/*" class="mt-2 block text-sm" />
+          <img id="rPreview" class="hidden mt-4 rounded-xl max-h-48 border border-gold" alt="Vista previa" />
+        </div>
+        <button class="w-full bg-primary text-lowest font-semibold rounded-xl py-3 hover:brightness-110 transition-all duration-300">Publicar reseña</button>
+        <p id="rOk" class="hidden text-primary text-sm text-center">¡Gracias! Tu reseña fue registrada.</p>
+      </form>
+    </section>
+  </main>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-lowest border-t border-gold mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3 text-sm">
+      <div>
+        <p class="font-display text-lg text-ink">M&amp;C <span class="text-primary">Automotores</span></p>
+        <p class="mt-3">Concesionaria boutique de vehículos de alta gama en Buenos Aires.</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Contacto</h3>
+        <p>+54 9 11 4567-8900</p>
+        <p>ventas@mcautomotores.com</p>
+        <p>Av. del Libertador, Corredor Norte, CABA</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Legal</h3>
+        <p>© 2026 M&amp;C Automotores. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+    // Calificación dinámica
+    const stars = document.querySelectorAll("#stars button");
+    const rRating = document.getElementById("rRating");
+    let current = 5;
+    function paintStars(n) {
+      stars.forEach((s) => s.classList.toggle("text-primary", Number(s.dataset.v) <= n));
+      rRating.value = n;
+    }
+    stars.forEach((s) => s.addEventListener("click", () => paintStars(Number(s.dataset.v))));
+    paintStars(current);
+
+    // Vista previa de foto
+    document.getElementById("rPhoto").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      const preview = document.getElementById("rPreview");
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.classList.remove("hidden");
+      }
+    });
+
+    // Envío
+    document.getElementById("reviewForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("rOk").classList.remove("hidden");
+      e.target.reset();
+      document.getElementById("rPreview").classList.add("hidden");
+      paintStars(5);
+    });
+  </script>
+</body>
+</html>

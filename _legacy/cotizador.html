@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&C Automotores | Cotizá tu Vehículo</title>
+  <meta name="description" content="Concesionaria boutique de vehículos de alta gama, deportivos y seminuevos certificados en Buenos Aires." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D4AF37',
+            base: '#10131A',
+            lowest: '#0B0E14',
+            card: '#191C22',
+            cardalt: '#1C2027',
+            hover: '#363940',
+            ink: '#F1F5F9',
+            muted: '#94A3B8',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderColor: {
+            gold: 'rgba(212, 175, 55, 0.15)',
+            goldstrong: 'rgba(212, 175, 55, 0.4)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+</head>
+
+<body class="bg-base text-muted font-sans antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-base/70 border-b border-gold">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-display text-xl text-ink tracking-wide">
+        M&amp;C <span class="text-primary">Automotores</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <li><a href="index.html" class="hover:text-primary transition-colors duration-300">Inicio</a></li>
+        <li><a href="nosotros.html" class="hover:text-primary transition-colors duration-300">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="hover:text-primary transition-colors duration-300">Ubicación</a></li>
+        <li><a href="testimonios.html" class="hover:text-primary transition-colors duration-300">Testimonios</a></li>
+        <li><a href="cotizador.html" class="hover:text-primary transition-colors duration-300">Cotizá</a></li>
+      </ul>
+
+      <a href="https://wa.me/5491145678900" target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 border border-goldstrong text-primary rounded-full px-4 py-2 text-sm hover:bg-primary hover:text-lowest transition-all duration-300">
+        <span class="material-symbols-outlined text-base">chat</span>
+        +54 9 11 4567-8900
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-ink" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gold bg-base/95 backdrop-blur-md">
+      <ul class="flex flex-col px-4 py-4 gap-4 text-sm">
+        <li><a href="index.html" class="block hover:text-primary transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="block hover:text-primary transition-colors">Nosotros</a></li>
+        <li><a href="ubicacion.html" class="block hover:text-primary transition-colors">Ubicación</a></li>
+        <li><a href="testimonios.html" class="block hover:text-primary transition-colors">Testimonios</a></li>
+        <li><a href="cotizador.html" class="block hover:text-primary transition-colors">Cotizá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section class="max-w-7xl mx-auto px-4 py-20">
+      <p class="text-primary uppercase tracking-[0.3em] text-xs mb-4">Cotizá tu vehículo</p>
+      <h1 class="font-display text-4xl md:text-6xl text-ink max-w-3xl leading-tight">
+        Tasación profesional <span class="text-primary">en el día.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl">Tres pasos, sin compromiso y con valoración transparente.</p>
+    </section>
+
+    <!-- Pasos -->
+    <section class="max-w-7xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-3">
+      <div class="bg-card border border-gold rounded-2xl p-6">
+        <span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
+        <h3 class="mt-4 text-ink font-semibold">1 · Enviá las fotos</h3>
+        <p class="mt-2 text-sm">Frontal, trasera, laterales, interior y odómetro por WhatsApp.</p>
+      </div>
+      <div class="bg-card border border-gold rounded-2xl p-6">
+        <span class="material-symbols-outlined text-primary text-3xl">search</span>
+        <h3 class="mt-4 text-ink font-semibold">2 · Peritamos</h3>
+        <p class="mt-2 text-sm">Revisamos documentación, kilometraje y estado general.</p>
+      </div>
+      <div class="bg-card border border-gold rounded-2xl p-6">
+        <span class="material-symbols-outlined text-primary text-3xl">payments</span>
+        <h3 class="mt-4 text-ink font-semibold">3 · Recibís la oferta</h3>
+        <p class="mt-2 text-sm">Valoración en el día, sin letra chica.</p>
+      </div>
+    </section>
+
+    <div class="text-center pb-16">
+      <a href="https://wa.me/5491145678900?text=Hola,%20quiero%20cotizar%20mi%20vehículo" target="_blank"
+         class="inline-flex items-center gap-2 bg-primary text-lowest font-semibold rounded-xl px-8 py-4 hover:brightness-110 transition-all duration-300">
+        <span class="material-symbols-outlined">chat</span> Enviar fotos por WhatsApp
+      </a>
+    </div>
+
+    <!-- Formulario exprés -->
+    <section class="max-w-3xl mx-auto px-4 pb-20">
+      <h2 class="font-display text-3xl text-ink mb-8">Formulario exprés</h2>
+      <form id="quoteForm" class="bg-card border border-gold rounded-3xl p-8 space-y-5">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label class="text-sm text-ink" for="qBrand">Marca</label>
+            <input id="qBrand" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+          </div>
+          <div>
+            <label class="text-sm text-ink" for="qModel">Modelo</label>
+            <input id="qModel" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+          </div>
+          <div>
+            <label class="text-sm text-ink" for="qYear">Año</label>
+            <input id="qYear" type="number" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+          </div>
+          <div>
+            <label class="text-sm text-ink" for="qKm">Kilómetros</label>
+            <input id="qKm" type="number" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="text-sm text-ink" for="qPhone">Teléfono</label>
+          <input id="qPhone" required class="mt-2 w-full bg-cardalt border border-gold rounded-xl px-4 py-3 text-sm text-ink focus:border-goldstrong outline-none" />
+        </div>
+        <button class="w-full bg-primary text-lowest font-semibold rounded-xl py-3 hover:brightness-110 transition-all duration-300">Solicitar tasación</button>
+        <p id="qOk" class="hidden text-primary text-sm text-center">¡Recibido! Te contactamos hoy para coordinar el peritaje.</p>
+      </form>
+    </section>
+  </main>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-lowest border-t border-gold mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3 text-sm">
+      <div>
+        <p class="font-display text-lg text-ink">M&amp;C <span class="text-primary">Automotores</span></p>
+        <p class="mt-3">Concesionaria boutique de vehículos de alta gama en Buenos Aires.</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Contacto</h3>
+        <p>+54 9 11 4567-8900</p>
+        <p>ventas@mcautomotores.com</p>
+        <p>Av. del Libertador, Corredor Norte, CABA</p>
+      </div>
+      <div>
+        <h3 class="text-ink font-semibold mb-3">Legal</h3>
+        <p>© 2026 M&amp;C Automotores. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("qOk").classList.remove("hidden");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
